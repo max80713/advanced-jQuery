@@ -1,0 +1,18 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: radial-gradient(rgb(1, 105, 165), rgb(0, 0, 129));
+  overflow: hidden;
+}
+
+.main {
+  width: 200px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+}
