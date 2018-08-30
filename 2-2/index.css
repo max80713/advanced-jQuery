@@ -4,30 +4,15 @@ body {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background: white;
+  justify-content: center;
+  margin: 0;
+  background: radial-gradient(rgb(1, 105, 165), rgb(0, 0, 129));
   overflow: hidden;
 }
 
-div {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  position: relative;
-}
-
-.red {
-  background: red;
-}
-
-.yellow {
-  background: yellow;
-}
-
-.green {
-  background: green;
-}
-
-.blue {
-  background: blue;
+.main {
+  width: 200px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
 }

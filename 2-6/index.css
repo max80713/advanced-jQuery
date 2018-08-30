@@ -1,0 +1,33 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  overflow: hidden;
+}
+
+div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
