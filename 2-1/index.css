@@ -11,10 +11,27 @@ body {
 }
 
 .main {
-  border: 1px solid white;
-  padding: 4px;
-  border-radius: 4px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  border-radius: 8px;
+  border: 8px solid white;
   text-align: center;
   color: white;
   cursor: pointer;
+  font-size: 72px;
+}
+
+.button {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  margin: 8px;
+  font-size: 36px;
 }

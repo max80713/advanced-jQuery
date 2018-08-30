@@ -1,17 +1,19 @@
 $(function() {
-  $('.main').mousedown(function(e) {
-    switch (e.which) {
-      case 1:
-        alert('左鍵');
-        break;
-      case 2:
-        alert('中鍵');
-        break;
-      case 3:
-        alert('右鍵');
-        break;
-      default:
-        alert('其他');
-    }   
+  var interval;
+
+  $('.button-increase').mousedown(function(e) {
+    interval = setInterval(function() {
+      $('.main').text(Number($('.main').text()) + 1);
+    }, 100);
+  }).mouseup(function(e) {
+    clearInterval(interval);
+  });
+
+  $('.button-decrease').mousedown(function(e) {
+    interval = setInterval(function() {
+      $('.main').text(Number($('.main').text()) - 1);
+    }, 500);
+  }).mouseup(function(e) {
+    clearInterval(interval);
   });
 });
