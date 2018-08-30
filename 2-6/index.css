@@ -1,0 +1,49 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.outer {
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-350px, -50%);
+
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  
+  border-right: 20px solid black;
+
+  cursor: pointer;
+}
+
+.right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(350px, -50%);
+
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  
+  border-left: 20px solid black;
+
+  cursor: pointer;
+}
