@@ -1,0 +1,27 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+div.out {
+  width: 40%;
+  height: 120px;
+  margin: 0 15px;
+  background-color: #d6edfc;
+  float: left;
+}
+div.in {
+  width: 60%;
+  height: 60%;
+  background-color: #fc0;
+  margin: 10px auto;
+}
+p {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
