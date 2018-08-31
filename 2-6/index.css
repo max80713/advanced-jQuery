@@ -9,25 +9,37 @@ body {
   overflow: hidden;
 }
 
-div {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.box {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
   position: relative;
+  background-size: auto 300px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 4px solid rgb(204, 203, 203);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.red {
-  background: red;
+.left {
+  background-image: url("html.png"); 
 }
 
-.yellow {
-  background: yellow;
+.middle {
+  background-image: url("css.png"); 
 }
 
-.green {
-  background: green;
+.right {
+  background-image: url("js.png"); 
 }
 
-.blue {
-  background: blue;
+.mask {
+  position: absolute;
+  background-image: url("mask.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
