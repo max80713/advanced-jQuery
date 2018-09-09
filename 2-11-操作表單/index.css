@@ -1,0 +1,17 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.message {
+  display: inline;
+}
+

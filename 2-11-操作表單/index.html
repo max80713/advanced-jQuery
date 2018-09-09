@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Advanced jQuery</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <form id="register-form">
+    <fieldset>
+      <legend>註冊帳號(驗證帳號格式)</legend>
+      帳號<br>
+      <input type="text" name="account"><p class="message"></p><br>
+      密碼<br>
+      <input type="password" name="password"><br><br>
+      <input type="submit" value="送出">
+    </fieldset>
+  </form>
+  <form id="member-info-form">
+    <fieldset>
+      <legend>填寫會員資料(同步地址)</legend>
+      戶籍地址<br>
+      <input type="text" name="permanent-address"><br>
+      通訊地址<br>
+      <input type="text" name="correspondance-address"><br>
+      <input type="checkbox" name="same-address">通訊地址同戶籍地址<br><br>
+      <input type="submit" value="送出">
+    </fieldset>
+  </form>
+  <form id="login-form">
+    <fieldset>
+      <legend>登入(按下enter送出)</legend>
+      <label for="account">帳號</label><br>
+      <input type="text" name="account"><br>
+      密碼<br>
+      <input type="password" name="password"><br><br>
+    </fieldset>
+  </form>
+  <form id="change-password-form">
+    <fieldset>
+      <legend>更換密碼(輸入時驗證密碼是否相同)</legend>
+      舊密碼<br>
+      <input type="password" name="old-password"><br>
+      新密碼<br>
+      <input type="password" name="new-password"><br>
+      確認新密碼<br>
+      <input type="password" name="comfirm-new-password"><p class="message"></p><br><br>
+      <input type="submit" value="送出">
+    </fieldset>
+  </form>
+  <form id="trade-form">
+    <fieldset>
+      <legend>購買(自動跳到下一輸入欄)</legend>
+      信用卡卡號<br>
+      <input type="text" name="card-number-1" class="card-number">-
+      <input type="text" name="card-number-2" class="card-number">-
+      <input type="text" name="card-number-3" class="card-number">-
+      <input type="text" name="card-number-4" class="card-number"><br>
+      安全碼<br>
+      <input type="text" name="security-number"><br><br>
+      <input type="submit" value="送出">
+    </fieldset>
+  </form>
+  <script src="../lib/jquery-3.3.1.min.js"></script>
+  <script src="../lib/jquery.mousewheel.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
