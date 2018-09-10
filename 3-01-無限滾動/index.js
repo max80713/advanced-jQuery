@@ -1,12 +1,12 @@
-function makeStyle(imageName) {
+function makeStyle(imageUrl) {
   return {
     width: '400px',
     height: '400px',
-    'background-image': 'url('+ imageName +'.jpeg)',
+    'background-image': 'url('+ imageUrl + ')',
     'background-position': 'center center',
     'background-size': 'cover',
     'flex-shrink': 0,
-    'margin-top': '40px'
+    'margin-top': '20px',
   }
 }
 
@@ -22,20 +22,6 @@ function makeLoadingStyle() {
   }
 }
 
-function appendImages() {
-  $('body')
-    .prepend($('<div></div>').css(makeStyle(3)))
-    .prepend($('<div></div>').css(makeStyle(2)))
-    .prepend($('<div></div>').css(makeStyle(1)));
-}
-
-function insertImages() {
-  $('.tag')
-    .before($('<div></div>').css(makeStyle(1)))
-    .before($('<div></div>').css(makeStyle(2)))
-    .before($('<div></div>').css(makeStyle(3)));
-}
-
 function insertLoading() {
   $('.tag')
     .before($('<div></div>').css(makeLoadingStyle()).addClass('loading'));
@@ -46,21 +32,34 @@ function removeLoading() {
     .remove();
 }
 
-function handleScroll() {
-  if ($('.tag').position().top - $(this).scrollTop() === $(this).height()) {
-    $(window).off();
+$(function() {
+  var isLoading = false;
+
+  function loadImages() {
+    isLoading = true;
     insertLoading();
-    setTimeout(function() {
+    loadData(function(data) {
       removeLoading();
-      insertImages();
-      $(window).on('scroll', handleScroll);
-    }, 1000);
+      data.forEach(function(item) {
+        var title = $('<div></div>').text(item.title).css('text-align', 'center');
+        var image = $('<div></div>').css(makeStyle(item.imageUrl));
+  
+        var wrapper = $('<div></div>').css('margin-top', '100px').append(title).append(image);
+        $('.tag').before(wrapper);
+      })
+      isLoading = false;
+    });
   }
 
-}
+  $(window).on('scroll', function() {
+    if (isLoading) {
+      return;
+    }
 
-$(function() {
-  appendImages();
+    if ($('.tag').position().top - $(this).scrollTop() === $(this).height()) {
+      loadImages();
+    }
+  });
 
-  $(window).on('scroll', handleScroll);
+  loadImages();
 });
