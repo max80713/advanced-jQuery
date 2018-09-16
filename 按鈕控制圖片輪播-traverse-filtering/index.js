@@ -52,6 +52,5 @@ $(function() {
     play();
   });
 
-  next();
   play();
 });

@@ -25,11 +25,31 @@ body {
   width: 600px;
   height: 400px;
   border: 1px solid black;
+  background-image: url(1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.buttons {
+.bars {
   margin-top: 20px;
+  display: flex;
+  width: 600px;
+}
+
+.bar {
+  border: 1px solid cadetblue;
+  height: 20px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.bar + .bar {
+  margin-left: 20px;
+}
+
+.progress {
+  height: 20px;
+  width: 100%;
+  background-color: cadetblue;
 }

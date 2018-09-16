@@ -25,6 +25,7 @@ body {
   width: 600px;
   height: 400px;
   border: 1px solid black;
+  background-image: url(1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
