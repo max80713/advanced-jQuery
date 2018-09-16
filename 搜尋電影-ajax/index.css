@@ -1,0 +1,17 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+input {
+  border: none;
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 4px;
+  outline: none;
+  height: 24px;
+  font-size: 20px;
+}
